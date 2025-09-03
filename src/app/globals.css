@@ -82,3 +82,362 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Animaciones increíbles personalizadas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpDelayed {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceSubtle {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes staggerIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Clases de animación */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-slide-up-delayed {
+  animation: slideUpDelayed 1.2s ease-out;
+}
+
+.animate-bounce-subtle {
+  animation: bounceSubtle 2s infinite;
+}
+
+/* Animaciones para el fondo dinámico */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+  25% {
+    background-position: 100% 25%;
+    transform: scale(1.02);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1);
+  }
+  75% {
+    background-position: 0% 75%;
+    transform: scale(0.98);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-25px) rotate(-1deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%) scaleY(1);
+  }
+  50% {
+    transform: translateX(0%) scaleY(1.1);
+  }
+  100% {
+    transform: translateX(100%) scaleY(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0.5;
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.08) rotate(2deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(10px) translateY(-5px);
+  }
+  50% {
+    transform: translateX(-5px) translateY(-10px);
+  }
+  75% {
+    transform: translateX(-10px) translateY(5px);
+  }
+}
+
+/* Clases para el fondo animado */
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease-in-out infinite;
+  will-change: transform, background-position;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-pulse-slow {
+  animation: pulse 6s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.animate-wave {
+  animation: wave 15s linear infinite;
+  will-change: transform;
+}
+
+.animate-rotate-slow {
+  animation: rotate 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-shimmer {
+  animation: shimmer 4s ease-in-out infinite;
+  will-change: background-position, opacity;
+}
+
+.animate-breathe {
+  animation: breathe 10s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-drift {
+  animation: drift 20s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Optimizaciones para móviles */
+@media (max-width: 768px) {
+  .animate-gradient {
+    animation-duration: 15s;
+  }
+  
+  .animate-float {
+    animation-duration: 10s;
+  }
+  
+  .animate-wave {
+    animation-duration: 20s;
+  }
+  
+  .animate-rotate-slow {
+    animation-duration: 40s;
+  }
+  
+  .animate-breathe {
+    animation-duration: 12s;
+  }
+  
+  .animate-drift {
+    animation-duration: 25s;
+  }
+}
+
+/* Reducir animaciones para usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .animate-gradient,
+  .animate-float,
+  .animate-pulse-slow,
+  .animate-wave,
+  .animate-rotate-slow,
+  .animate-shimmer,
+  .animate-breathe,
+  .animate-drift {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    opacity: 0.3 !important;
+  }
+}
+
+.animate-stagger-in {
+  animation: staggerIn 0.8s ease-out;
+}
+
+.animate-fade-in-section {
+  animation: fadeIn 1s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Delays para animaciones escalonadas */
+.animation-delay-300 {
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+.animation-delay-700 {
+  animation-delay: 0.7s;
+  animation-fill-mode: both;
+}
+
+/* Animaciones de scroll suaves */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Efectos hover mejorados */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(130, 40, 50, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Animaciones de entrada para elementos del menú */
+.animate-stagger-in > * {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.animate-stagger-in > *:nth-child(1) { animation-delay: 0.1s; }
+.animate-stagger-in > *:nth-child(2) { animation-delay: 0.2s; }
+.animate-stagger-in > *:nth-child(3) { animation-delay: 0.3s; }
+.animate-stagger-in > *:nth-child(4) { animation-delay: 0.4s; }
+.animate-stagger-in > *:nth-child(5) { animation-delay: 0.5s; }
