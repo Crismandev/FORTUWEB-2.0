@@ -87,7 +87,7 @@ Este proyecto está bajo la Licencia MIT.
 
 ## 👨‍💻 Desarrollado por
 
-**Cristian Mamani** - [Crismandev](https://github.com/Crismandev)
+**Cristhian Mantilla** - [Crismandev](https://github.com/Crismandev)
 
 ---
 
